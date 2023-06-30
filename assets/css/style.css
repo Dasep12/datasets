@@ -1,0 +1,391 @@
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: transparent !important;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #000
+}
+
+nav.navbar .navbar-nav li.nav-item.active:after {
+    content: "";
+    /* position: relative !important;
+    margin-left: -15px !important;
+    left: 50% !important;
+    transform: rotate(180) !important;
+    top: -20px !important;
+    border-left: 15px solid transparent !important;
+    border-right: 15px solid transparent !important;
+    border-bottom: 15px solid white !important; */
+}
+
+.highcharts-button-symbol {
+    height: 26px !important;
+    width: 26px !important;
+}
+
+select {
+    background-color: #f2f0f0;
+}
+
+.card {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.icon-badge-container {
+    margin-top: 20px;
+    position: relative;
+}
+
+.icon-badge {
+    background-color: red;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 35%;
+    position: absolute;
+    /* changed */
+    top: -5px;
+    /* changed */
+    left: 18px;
+    /* changed */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/*  */
+/* RESET */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+body {
+  font-family : sans-serif;
+  font-size:14px;
+}
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
+.fake_input {
+    display:flex;
+    width: 100%;
+    background: #fff;
+    height: 2.8571em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 0.2142em;
+}
+
+.fake_input p, .fake_input span {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 350;
+    line-height: 2.5;
+    padding: 0 1.1111em;
+    margin:0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.picker-arrow:after {
+    content: '';
+    display: block;
+    height: 0.2857em;
+    width: 0.2857em;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    padding: 0.2857em;
+    transition: all 0.3s ease-in-out;
+}
+
+.date_pick-container{
+  /* display:inline-block;   */
+}
+
+.date_pick.active .picker-arrow:after, .select_box.active .picker-arrow:after {
+    top: 1.1428em;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+}
+
+.picker_line {
+    height: 5.71428em;
+}
+
+.date_selector {
+    display: none;
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.date_selector.active {
+    display: block;
+    position:absolute;
+    z-index: 1;
+}
+
+.selector_date_version{
+    float:right;
+}
+
+.box_selector {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    display: none;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.box_selector.active {
+    display: block;
+}
+
+.box_selector a {
+    position: relative;
+}
+
+.box_selector a.active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0.571428em;
+    left: 1.07142em;
+    width: 0.5714em;
+    height: 0.8571em;
+    border: solid #24d1d7;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.box_selector-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.box_selector-list a:hover {
+    text-decoration: none;
+}
+
+.box_selector-list a.active::before {
+    content: '';
+}
+
+.box_selector-element {
+    padding: 0.7142em 0 0.7142em 2.5em;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.box_selector-element:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.date_pick.active .fake_input {
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #9a9a9a;
+}
+
+.date_pick {
+    font-weight: 500;
+    width: 100%;
+}
+
+.date_pick.active {
+    -webkit-box-shadow: -0.14285em 0.21428em 2.57142em 0 rgba(102, 102, 102, 0.4);
+    -moz-box-shadow: -0.14285em 0.21428em 2.57142em 0 rgba(102, 102, 102, 0.4);
+    box-shadow: -0.14285em 0.21428em 2.57142em 0 rgba(102, 102, 102, 0.4);
+    border-radius: 16px;
+    position: relative;
+    display: block;
+}
+
+.picker_date {
+}
+/*  */
+.date_pick .shortYears {
+    /* position: relative; */
+    text-align: center;
+    display: flex;
+    margin-top: 0.5714em;
+/*    margin-left: 20;*/
+    justify-content: left;
+}
+
+.date_pick .shortYears a {
+    width: 4em;
+    position: relative;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.date_pick .shortYears {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 100%;
+/*    padding: 0.35714em 0.7142em 1.07142em;*/
+}
+
+.date_pick .shortYears a {
+    flex-grow: 1;
+    flex-basis: 25%;
+    margin: 0.5em;
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center;
+}
+/*  */
+.date_pick .years a {
+    width: 2em;
+    position: relative;
+}
+
+.date_pick .years {
+    position: relative;
+    text-align: center;
+    display: flex;
+    margin-top: 0.5714em;
+    justify-content: center;
+}
+
+.date_pick .years a {
+    width: 2em;
+    position: relative;
+}
+
+.date_pick .months {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.35714em 0.7142em 1.07142em;
+    width: 80%;
+}
+
+.date_pick .months a {
+    flex-grow: 1;
+    flex-basis: 25%;
+    min-width: 30px;
+    cursor: pointer;
+    margin: 0.6em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.date_pick .months a:active, .date_pick .months a:focus, .date_pick .months a.active {
+    background: #007bff8c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.picker-select-arrow:after {
+    content: '';
+    position: absolute;
+    top: 0.42857em;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    padding: 0.2857em;
+    transition: all 0.3s ease-in-out;
+}
+
+.picker-left:after {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.picker-right:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 50%;
+}
+
+.date_selector .months .month{
+  text-transform:capitalize;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.date_selector .c {
+    display: flex;
+    flex-direction: row;
+}
+
+.fake_input::after{
+    content: '';
+    display: inline-flex;
+    width: 0.7857em;
+    height: 0.7857em;
+    transform-origin: center;
+    transform: rotate(45deg);
+    margin-left: auto;
+    margin-right: 1em;
+    margin-top: 0.7571em;
+    transition: all 0.3s ease-in;
+    border-right: 0.2142em solid #000;
+    border-bottom: 0.2142em solid #000;
+}
+
+.date_pick.active .fake_input::after{
+  transform: rotate(225deg);
+  margin-top: 1.1em;
+}
+
+.years .year-selected {
+  font-size:1em;
+  width:3.65em;
+  padding-left:0.66em;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.years input::-webkit-outer-spin-button,
+.years input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.years input[type=number] {
+  -moz-appearance:textfield;
+}
+/*  */
